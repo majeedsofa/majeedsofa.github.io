@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>84爆料吃瓜_吃瓜爆料在线观看_娱乐圈爆料视频社区</title>
+<meta name="description" content="84爆料吃瓜官方网站，专注娱乐爆料与吃瓜话题的原创视频社区，提供高清爆料视频、深度解读与创作者内容生态，为用户呈现真实、多元的娱乐观察视角。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e0e13'/%3E%3Ccircle cx='24' cy='26' r='9' fill='%23ff2e5b'/%3E%3Ccircle cx='42' cy='40' r='7' fill='%23ffd23f'/%3E%3Cpath d='M18 48h28' stroke='%23f72585' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0b0b10;
+  --panel:#14141c;
+  --panel2:#1b1b26;
+  --line:#2a2a38;
+  --txt:#ecebf2;
+  --muted:#9a99ab;
+  --neon:#ff2e5b;
+  --neon2:#ffd23f;
+  --neon3:#8b5cf6;
+  --ok:#2ee6a8;
+  --radius:16px;
+  --maxw:1180px;
+  --stick:112px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stick);}
+body{
+  margin:0;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(139,92,246,.20), transparent 60%),
+    radial-gradient(700px 420px at 5% 5%, rgba(255,46,91,.14), transparent 60%),
+    var(--bg);
+  color:var(--txt);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em;letter-spacing:.01em;}
+p{margin:0 0 1em;}
+ul{margin:0 0 1em;padding-left:1.15em;}
+button{font-family:inherit;cursor:pointer;}
+.bg-wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+
+/* ===== 公告条 + 页头 吸顶 ===== */
+.bg-sticky{position:sticky;top:0;z-index:200;}
+.bg-notice{
+  background:linear-gradient(90deg,#ff2e5b,#8b5cf6 55%,#ffd23f);
+  color:#0b0b10;
+  font-size:13px;
+  font-weight:700;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.bg-notice .bg-wrap{display:flex;align-items:center;gap:12px;height:36px;overflow:hidden;}
+.bg-notice-tag{
+  flex:0 0 auto;background:#0b0b10;color:#ffd23f;border-radius:6px;
+  padding:2px 8px;font-size:11px;letter-spacing:.06em;
+}
+.bg-notice-track{display:flex;gap:40px;animation:bg-marquee 26s linear infinite;}
+.bg-notice-track span{flex:0 0 auto;}
+@keyframes bg-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.bg-notice-track{animation:none;}}
+
+.bg-header{
+  background:rgba(11,11,16,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.bg-header-in{display:flex;align-items:center;gap:22px;height:74px;}
+.bg-logo{display:flex;align-items:center;gap:10px;flex:0 0 auto;font-weight:800;font-size:19px;letter-spacing:.02em;}
+.bg-logo-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--neon),var(--neon3));display:grid;place-items:center;color:#fff;font-size:16px;font-weight:900;box-shadow:0 0 18px rgba(255,46,91,.45);}
+.bg-logo small{display:block;font-size:10px;font-weight:500;color:var(--muted);letter-spacing:.16em;}
+.bg-nav{display:flex;gap:4px;flex:1 1 auto;min-width:0;flex-wrap:wrap;}
+.bg-nav a{
+  padding:8px 12px;border-radius:9px;font-size:14px;color:#c9c8d6;white-space:nowrap;
+  transition:background .2s,color .2s;
+}
+.bg-nav a:hover,.bg-nav a.bg-active{background:var(--panel2);color:#fff;}
+.bg-search{position:relative;flex:0 0 230px;display:flex;align-items:center;}
+.bg-search input{
+  width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  color:var(--txt);padding:9px 38px 9px 12px;font-size:13px;outline:none;transition:border-color .2s,box-shadow .2s;
+}
+.bg-search input:focus{border-color:var(--neon);box-shadow:0 0 0 3px rgba(255,46,91,.16);}
+.bg-search button{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  background:transparent;border:0;color:var(--muted);font-size:15px;padding:6px 8px;border-radius:7px;
+}
+.bg-search button:hover{color:var(--neon2);}
+.bg-search-hint{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--panel2);
+  border:1px solid var(--line);border-radius:12px;padding:8px;font-size:13px;color:var(--muted);
+  display:none;box-shadow:0 18px 40px rgba(0,0,0,.5);z-index:50;
+}
+.bg-search-hint.bg-open{display:block;}
+.bg-search-hint b{color:var(--neon2);}
+.bg-menu-btn{display:none;background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:8px 12px;font-size:14px;}
+
+@media (max-width:980px){
+  .bg-nav{display:none;order:5;width:100%;}
+  .bg-header-in{height:auto;padding:12px 0;flex-wrap:wrap;gap:12px;}
+  .bg-header.bg-nav-open .bg-nav{display:flex;}
+  .bg-menu-btn{display:inline-block;margin-left:auto;}
+  .bg-search{flex:1 1 100%;order:6;}
+  :root{--stick:150px;}
+}
+
+/* ===== 通用 ===== */
+.bg-sec{padding:64px 0;}
+.bg-sec-alt{background:linear-gradient(180deg,rgba(255,255,255,.025),transparent);}
+.bg-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.20em;
+  text-transform:uppercase;color:var(--neon2);font-weight:700;margin-bottom:12px;
+}
+.bg-eyebrow::before{content:"";width:22px;height:2px;background:var(--neon);border-radius:2px;}
+.bg-sec-title{font-size:clamp(22px,3vw,32px);font-weight:800;}
+.bg-sec-title em{font-style:normal;color:var(--neon);}
+.bg-sec-desc{color:var(--muted);font-size:15px;max-width:760px;}
+.bg-divider{height:1px;background:var(--line);margin:0;}
+.bg-tag{
+  display:inline-block;font-size:11px;padding:2px 9px;border-radius:99px;
+  border:1px solid var(--line);color:#b9b8c9;background:rgba(255,255,255,.03);white-space:nowrap;
+}
+.bg-tag-hot{border-color:rgba(255,46,91,.5);color:#ff8aa0;background:rgba(255,46,91,.10);}
+.bg-tag-new{border-color:rgba(46,230,168,.45);color:#7ff0cd;background:rgba(46,230,168,.08);}
+.bg-btn{
+  display:inline-flex;align-items:center;gap:8px;border-radius:11px;padding:11px 20px;
+  border:1px solid var(--line);background:var(--panel2);color:var(--txt);font-size:14px;font-weight:600;
+  transition:transform .18s,border-color .18s,background .18s,box-shadow .18s;
+}
+.bg-btn:hover{transform:translateY(-2px);border-color:#43435a;}
+.bg-btn-primary{
+  background:linear-gradient(120deg,var(--neon),#c026d3);border-color:transparent;color:#fff;
+  box-shadow:0 10px 26px rgba(255,46,91,.28);
+}
+.bg-btn-primary:hover{box-shadow:0 14px 34px rgba(255,46,91,.42);border-color:transparent;}
+.bg-btn-ghost{background:transparent;}
+.bg-btn-sm{padding:6px 12px;font-size:12px;border-radius:8px;}
+.bg-link-arrow{color:var(--neon2);font-size:13px;font-weight:600;}
+.bg-link-arrow:hover{text-decoration:underline;}
+
+/* ===== 首屏（左文右侧大图 + 数据条） ===== */
+.bg-hero{padding:56px 0 30px;}
+.bg-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:44px;align-items:center;}
+.bg-hero h1{
+  font-size:clamp(34px,5vw,58px);font-weight:900;line-height:1.12;margin:14px 0 18px;
+  letter-spacing:-.01em;
+}
+.bg-hero h1 span{
+  background:linear-gradient(100deg,var(--neon) 10%,var(--neon2) 60%,#8b5cf6 95%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.bg-hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.bg-hero-lead{color:#c3c2d2;font-size:16px;max-width:560px;}
+.bg-hero-intro{color:var(--muted);font-size:14.5px;max-width:580px;}
+.bg-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 26px;}
+.bg-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:560px;}
+.bg-stat{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:13px 15px;}
+.bg-stat-num{font-size:22px;font-weight:900;color:#fff;letter-spacing:.01em;}
+.bg-stat-num i{font-style:normal;color:var(--neon2);}
+.bg-stat-label{font-size:12px;color:var(--muted);letter-spacing:.04em;}
+.bg-hero-visual{position:relative;}
+.bg-hero-visual svg{width:100%;height:auto;border-radius:20px;display:block;border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.6);}
+.bg-hero-badge{
+  position:absolute;left:16px;bottom:16px;background:rgba(11,11,16,.86);backdrop-filter:blur(8px);
+  border:1px solid var(--line);border-radius:12px;padding:9px 14px;font-size:12.5px;display:flex;align-items:center;gap:9px;
+}
+.bg-live-dot{width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 0 0 rgba(255,46,91,.7);animation:bg-pulse 1.9s infinite;}
+@keyframes bg-pulse{70%{box-shadow:0 0 0 10px rgba(255,46,91,0);}100%{box-shadow:0 0 0 0 rgba(255,46,91,0);}}
+@media (max-width:900px){
+  .bg-hero-grid{grid-template-columns:minmax(0,1fr);gap:30px;}
+  .bg-hero-visual{order:-1;}
+}
+
+/* ===== 视频区：一幅重点大图 + 文字列表 ===== */
+.bg-feature-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px;align-items:start;}
+.bg-feature-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  transition:border-color .2s,transform .2s;display:flex;flex-direction:column;
+}
+.bg-feature-card:hover{border-color:#45455e;transform:translateY(-3px);}
+.bg-feature-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;}
+.bg-feature-thumb svg{width:100%;height:100%;display:block;object-fit:cover;}
+.bg-play{
+  position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.55));
+}
+.bg-play span{
+  width:58px;height:58px;border-radius:50%;background:rgba(255,46,91,.92);display:grid;place-items:center;
+  color:#fff;font-size:20px;box-shadow:0 10px 30px rgba(255,46,91,.5);transition:transform .2s;
+}
+.bg-feature-card:hover .bg-play span{transform:scale(1.08);}
+.bg-feature-body{padding:20px 22px 22px;}
+.bg-feature-body h3{font-size:20px;font-weight:800;}
+.bg-feature-body p{font-size:14px;color:var(--muted);margin-bottom:12px;}
+.bg-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);align-items:center;}
+.bg-meta b{color:var(--neon2);font-weight:700;}
+.bg-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.bg-act{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#c9c8d6;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:9px;padding:6px 11px;
+  transition:background .18s,color .18s,border-color .18s;
+}
+.bg-act:hover{background:rgba(255,255,255,.09);color:#fff;}
+.bg-act.bg-liked{color:var(--neon);border-color:rgba(255,46,91,.55);background:rgba(255,46,91,.10);}
+.bg-act.bg-saved{color:var(--neon2);border-color:rgba(255,210,63,.55);background:rgba(255,210,63,.10);}
+
+.bg-vlist{list-style:none;padding:0;margin:0;display:grid;gap:12px;}
+.bg-vitem{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;
+  background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 17px;
+  transition:border-color .2s,background .2s;
+}
+.bg-vitem:hover{border-color:#45455e;background:var(--panel2);}
+.bg-vitem h4{font-size:15px;font-weight:700;margin-bottom:5px;}
+.bg-vitem p{font-size:13px;color:var(--muted);margin:0 0 8px;}
+.bg-vitem-rank{
+  flex:0 0 auto;font-size:20px;font-weight:900;color:#3c3c50;line-height:1;font-style:italic;
+  min-width:30px;text-align:center;
+}
+.bg-vitem-rank.bg-top{color:var(--neon);}
+.bg-vitem-left{display:flex;gap:14px;min-width:0;align-items:flex-start;}
+.bg-vitem-tags{display:flex;gap:6px;flex-wrap:wrap;}
+
+/* ===== 专题（3-5 专题） ===== */
+.bg-topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px;}
+.bg-topic{
+  background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px;position:relative;overflow:hidden;
+  transition:transform .2s,border-color .2s;
+}
+.bg-topic:hover{transform:translateY(-3px);border-color:#4a4a63;}
+.bg-topic::after{
+  content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,46,91,.22),transparent 70%);
+}
+.bg-topic-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:10px;}
+.bg-topic h3{font-size:17px;margin-bottom:4px;}
+.bg-topic-sub{font-size:12px;color:var(--muted);}
+.bg-topic-list{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:9px;}
+.bg-topic-list li{font-size:13px;color:#c3c2d2;padding-left:16px;position:relative;line-height:1.6;}
+.bg-topic-list li::before{content:"▸";position:absolute;left:0;color:var(--neon);}
+.bg-topic-list li:hover{color:#fff;}
+
+/* ===== 关键词解析（长文） ===== */
+.bg-article{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:38px;align-items:start;}
+.bg-article-body p{color:#c3c2d2;font-size:15px;}
+.bg-article-body h3{font-size:19px;margin:30px 0 10px;color:#fff;}
+.bg-article-body h3::before{content:"";display:inline-block;width:6px;height:18px;border-radius:3px;background:linear-gradient(180deg,var(--neon),var(--neon3));margin-right:10px;vertical-align:-3px;}
+.bg-callout{
+  border-left:3px solid var(--neon);background:linear-gradient(90deg,rgba(255,46,91,.10),transparent);
+  padding:14px 18px;border-radius:0 12px 12px 0;font-size:14px;color:#dcdbe6;margin:18px 0;
+}
+.bg-aside{position:sticky;top:calc(var(--stick) + 20px);display:grid;gap:16px;}
+.bg-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;}
+.bg-card h4{font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.bg-card h4::before{content:"";width:3px;height:14px;background:var(--neon2);border-radius:2px;}
+.bg-kv{display:grid;gap:10px;font-size:13px;}
+.bg-kv div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:8px;color:var(--muted);}
+.bg-kv div:last-child{border:0;padding:0;}
+.bg-kv b{color:#fff;font-weight:600;}
+.bg-aside-tags{display:flex;gap:7px;flex-wrap:wrap;}
+@media (max-width:920px){.bg-article{grid-template-columns:minmax(0,1fr);}.bg-aside{position:static;}}
+
+/* ===== 作者矩阵：双列简介 ===== */
+.bg-authors{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:18px;}
+.bg-author{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;transition:border-color .2s,transform .2s;
+}
+.bg-author:hover{border-color:#4a4a63;transform:translateY(-2px);}
+.bg-avatar{
+  width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-weight:900;font-size:20px;
+  color:#0b0b10;flex:0 0 auto;box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+.bg-author h3{font-size:16px;margin-bottom:2px;}
+.bg-author-role{font-size:12px;color:var(--neon2);margin-bottom:8px;letter-spacing:.03em;}
+.bg-author p{font-size:13px;color:var(--muted);margin:0 0 10px;}
+.bg-author-nums{display:flex;gap:16px;font-size:12px;color:var(--muted);}
+.bg-author-nums b{color:#fff;font-size:13px;}
+.bg-author-btn{background:transparent;border:0;color:var(--neon2);font-size:12.5px;padding:0;font-weight:600;}
+.bg-author-btn:hover{text-decoration:underline;}
+
+/* ===== 榜单 / 数据 ===== */
+.bg-board-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:18px;}
+.bg-board{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;}
+.bg-board h3{font-size:16px;display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.bg-board h3 span{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.04em;}
+.bg-board ol{list-style:none;padding:0;margin:0;display:grid;gap:11px;counter-reset:bgrank;}
+.bg-board li{
+  display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:center;
+  font-size:13.5px;counter-increment:bgrank;border-bottom:1px dashed var(--line);padding-bottom:9px;
+}
+.bg-board li:last-child{border:0;padding:0;}
+.bg-board li::before{content:counter(bgrank);color:#4f4f68;font-weight:900;font-style:italic;font-size:14px;}
+.bg-board li:nth-child(1)::before{color:var(--neon);}
+.bg-board li:nth-child(2)::before{color:var(--neon2);}
+.bg-board li:nth-child(3)::before{color:var(--neon3);}
+.bg-board li b{font-weight:600;color:#e2e1ec;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.bg-board li i{font-style:normal;font-size:11.5px;color:var(--muted);}
+
+/* ===== 评论：引用摘录 + 短评 ===== */
+.bg-quote{
+  background:linear-gradient(135deg,rgba(139,92,246,.16),rgba(255,46,91,.08));
+  border:1px solid #3a3550;border-radius:var(--radius);padding:26px 28px;margin-bottom:22px;position:relative;
+}
+.bg-quote::before{content:"“";position:absolute;top:6px;left:16px;font-size:64px;color:rgba(255,255,255,.10);line-height:1;font-family:Georgia,serif;}
+.bg-quote p{font-size:16px;color:#e8e7f1;margin:0 0 14px;position:relative;}
+.bg-quote-by{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);}
+.bg-comments{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px;}
+.bg-comment{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:16px 18px;}
+.bg-comment-head{display:flex;align-items:center;gap:10px;margin-bottom:9px;}
+.bg-comment-head .bg-avatar{width:34px;height:34px;border-radius:10px;font-size:13px;}
+.bg-comment-head b{font-size:13.5px;}
+.bg-comment-head small{color:var(--muted);font-size:11.5px;display:block;}
+.bg-comment p{font-size:13.5px;color:#c3c2d2;margin:0 0 8px;}
+.bg-comment-foot{display:flex;gap:12px;font-size:11.5px;color:var(--muted);}
+.bg-stars{color:var(--neon2);letter-spacing:1px;}
+
+/* ===== 动态 / FAQ / 伙伴 ===== */
+.bg-news{list-style:none;padding:0;margin:0;display:grid;gap:12px;}
+.bg-news li{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:baseline;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;
+  transition:border-color .2s;
+}
+.bg-news li:hover{border-color:#4a4a63;}
+.bg-news time{font-size:12px;color:var(--neon2);font-weight:700;white-space:nowrap;letter-spacing:.03em;}
+.bg-news b{display:block;font-size:14.5px;margin-bottom:2px;}
+.bg-news span{font-size:13px;color:var(--muted);}
+
+.bg-faq{display:grid;gap:10px;}
+.bg-faq details{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:0;overflow:hidden;
+  transition:border-color .2s;
+}
+.bg-faq details[open]{border-color:#4a4a63;}
+.bg-faq summary{
+  cursor:pointer;padding:15px 18px;font-size:14.5px;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.bg-faq summary::-webkit-details-marker{display:none;}
+.bg-faq summary::after{content:"+";color:var(--neon);font-size:18px;font-weight:400;transition:transform .2s;}
+.bg-faq details[open] summary::after{content:"−";}
+.bg-faq p{padding:0 18px 16px;margin:0;font-size:13.5px;color:var(--muted);}
+
+.bg-partners{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:12px;}
+.bg-partner{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;
+  font-size:13.5px;font-weight:700;color:#cfcedd;transition:border-color .2s,color .2s;
+}
+.bg-partner:hover{border-color:rgba(255,210,63,.5);color:var(--neon2);}
+.bg-partner small{display:block;font-weight:400;font-size:11px;color:var(--muted);margin-top:4px;}
+
+/* ===== 投稿条 ===== */
+.bg-cta{
+  background:linear-gradient(120deg,rgba(255,46,91,.16),rgba(139,92,246,.16));
+  border:1px solid #3d3454;border-radius:20px;padding:34px;text-align:center;
+}
+.bg-cta h2{font-size:clamp(20px,2.6vw,28px);}
+.bg-cta p{color:var(--muted);max-width:620px;margin:0 auto 20px;font-size:14.5px;}
+.bg-cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+
+/* ===== 页脚 ===== */
+.bg-footer{background:#08080c;border-top:1px solid var(--line);padding:52px 0 26px;margin-top:20px;}
+.bg-footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,minmax(0,1fr));gap:32px;margin-bottom:36px;}
+.bg-footer h4{font-size:13.5px;letter-spacing:.08em;color:#fff;margin-bottom:14px;}
+.bg-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;font-size:13px;color:var(--muted);}
+.bg-footer ul a:hover{color:var(--neon2);}
+.bg-footer-brand p{font-size:13px;color:var(--muted);max-width:320px;}
+.bg-footer-bottom{
+  border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7a798f;
+}
+@media (max-width:820px){.bg-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+
+/* ===== 弹窗 / Toast / 回到顶部 ===== */
+.bg-modal{
+  position:fixed;inset:0;background:rgba(4,4,8,.75);backdrop-filter:blur(6px);z-index:400;
+  display:none;place-items:center;padding:20px;
+}
+.bg-modal.bg-open{display:grid;}
+.bg-modal-box{
+  background:var(--panel);border:1px solid #3a3a4f;border-radius:18px;max-width:520px;width:100%;
+  padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.7);max-height:86vh;overflow:auto;
+}
+.bg-modal-box h3{font-size:19px;margin-bottom:8px;}
+.bg-modal-box p{font-size:13.5px;color:var(--muted);}
+.bg-modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:14px;}
+.bg-close{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:9px;width:32px;height:32px;font-size:16px;flex:0 0 auto;}
+.bg-close:hover{color:#fff;border-color:#5a5a75;}
+.bg-field{display:grid;gap:6px;margin-bottom:14px;}
+.bg-field label{font-size:12.5px;color:var(--muted);}
+.bg-field input,.bg-field textarea,.bg-field select{
+  width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:10px;
+  color:var(--txt);padding:10px 12px;font-size:13.5px;outline:none;font-family:inherit;
+}
+.bg-field input:focus,.bg-field textarea:focus,.bg-field select:focus{border-color:var(--neon);}
+.bg-field textarea{resize:vertical;min-height:88px;}
+.bg-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);z-index:500;
+  background:#1f1f2c;border:1px solid #45455e;color:#fff;padding:11px 22px;border-radius:11px;
+  font-size:13.5px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+  box-shadow:0 18px 40px rgba(0,0,0,.6);max-width:88vw;
+}
+.bg-toast.bg-show{opacity:1;transform:translate(-50%,0);}
+.bg-top{
+  position:fixed;right:22px;bottom:26px;z-index:300;width:46px;height:46px;border-radius:13px;
+  background:var(--panel2);border:1px solid var(--line);color:var(--neon2);font-size:18px;
+  display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+}
+.bg-top.bg-show{opacity:1;pointer-events:auto;}
+.bg-top:hover{transform:translateY(-3px);border-color:var(--neon);}
+
+/* ===== 筛选 ===== */
+.bg-filters{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 26px;}
+.bg-filter{
+  background:var(--panel);border:1px solid var(--line);color:#c3c2d2;font-size:13px;
+  padding:7px 15px;border-radius:99px;transition:all .18s;
+}
+.bg-filter:hover{border-color:#4a4a63;color:#fff;}
+.bg-filter.bg-on{background:rgba(255,46,91,.14);border-color:rgba(255,46,91,.55);color:#ff90a4;font-weight:600;}
+.bg-empty{font-size:13.5px;color:var(--muted);padding:14px 0;display:none;}
+.bg-empty.bg-show{display:block;}
+.bg-hide{display:none !important;}
+
+@media (max-width:700px){
+  .bg-sec{padding:44px 0;}
+  .bg-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+  .bg-stat{padding:10px 11px;}
+  .bg-stat-num{font-size:17px;}
+  .bg-feature-grid{grid-template-columns:minmax(0,1fr);}
+  .bg-vitem{grid-template-columns:minmax(0,1fr);}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="bg-sticky">
+  <div class="bg-notice" aria-label="站内最新公告">
+    <div class="bg-wrap">
+      <span class="bg-notice-tag">最新</span>
+      <div class="bg-notice-track">
+        <span>「年度爆料大会」专题上线，18 位创作者联合解读 2026 娱乐热点</span>
+        <span>纪录片《镜头之外·记录者手记》第 6 集更新，聚焦一线内容团队</span>
+        <span>11 月 24 日 20:00 直播：如何做出可信的爆料视频？</span>
+        <span>「年度爆料大会」专题上线，18 位创作者联合解读 2026 娱乐热点</span>
+        <span>纪录片《镜头之外·记录者手记》第 6 集更新，聚焦一线内容团队</span>
+        <span>11 月 24 日 20:00 直播：如何做出可信的爆料视频？</span>
+      </div>
+    </div>
+  </div>
+  <header class="bg-header" id="bgHeader">
+    <div class="bg-wrap bg-header-in">
+      <a class="bg-logo" href="#top">
+        <span class="bg-logo-mark">84</span>
+        <span>84爆料吃瓜<small>OFFICIAL VIDEO HUB</small></span>
+      </a>
+      <nav class="bg-nav" aria-label="主导航">
+        <a href="#feed" class="bg-active">视频</a>
+        <a href="#topics">专题</a>
+        <a href="#explain">关键词解析</a>
+        <a href="#authors">创作者</a>
+        <a href="#board">榜单</a>
+        <a href="#comments">评价</a>
+        <a href="#news">动态</a>
+        <a href="#faq">帮助</a>
+      </nav>
+      <button class="bg-menu-btn" id="bgMenuBtn" aria-expanded="false" aria-controls="bgHeader">菜单</button>
+      <div class="bg-search">
+        <label for="bgSearch" class="bg-hide" style="display:none;">站内搜索</label>
+        <input id="bgSearch" type="search" placeholder="搜索爆料、专题、创作者" autocomplete="off">
+        <button id="bgSearchBtn" type="button" aria-label="提交搜索">🔍</button>
+        <div class="bg-search-hint" id="bgSearchHint" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- S2 品牌首屏 -->
+  <section class="bg-hero">
+    <div class="bg-wrap bg-hero-grid">
+      <div>
+        <div class="bg-hero-badges">
+          <span class="bg-tag bg-tag-hot">官方网站</span>
+          <span class="bg-tag bg-tag-new">持续运营中</span>
+          <span class="bg-tag">原创 · 正版 · 高清</span>
+        </div>
+        <h1>84爆料吃瓜<span>视频品牌官网</span></h1>
+        <p class="bg-hero-lead">一家专注娱乐爆料与吃瓜话题的原创视频内容平台。我们用镜头梳理信息、核验细节、还原现场，让每一次围观都更有分寸感。</p>
+        <p class="bg-hero-intro">作为深耕娱乐内容垂类多年的企业，84爆料吃瓜以创作者社区为底座，构建从选题、拍摄、剪辑到发布的可信内容生态。平台坚持用户至上与真实表达，为观众提供高清精品内容，也为创作者提供稳定的成长路径与值得信赖的发布环境。</p>
+        <div class="bg-hero-actions">
+          <a class="bg-btn bg-btn-primary" href="#feed">▶ 观看最新爆料</a>
+          <a class="bg-btn bg-btn-ghost" href="#submit" data-bg-modal="submit">✎ 我要投稿</a>
+          <a class="bg-btn bg-btn-ghost" href="#authors">创作者名录</a>
+        </div>
+        <div class="bg-stats">
+          <div class="bg-stat">
+            <div class="bg-stat-num" data-bg-count="3820">3,820<i>+</i></div>
+            <div class="bg-stat-label">原创爆料视频</div>
+          </div>
+          <div class="bg-stat">
+            <div class="bg-stat-num" data-bg-count="276">276<i>位</i></div>
+            <div class="bg-stat-label">签约创作者</div>
+          </div>
+          <div class="bg-stat">
+            <div class="bg-stat-num" data-bg-count="96">96<i>%</i></div>
+            <div class="bg-stat-label">内容核验通过率</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-hero-visual">
+        <svg viewBox="0 0 720 560" role="img" aria-label="84爆料吃瓜官网首屏主视觉：夜间编辑台前的内容核验场景">
+          <defs>
+            <linearGradient id="heroSky" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1a1230"/><stop offset="55%" stop-color="#221a3c"/><stop offset="1" stop-color="#0d0b18"/>
+            </linearGradient>
+            <linearGradient id="heroGlow" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ff2e5b"/><stop offset="0.5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ffd23f"/>
+            </linearGradient>
+            <linearGradient id="heroPanel" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2a2547"/><stop offset="1" stop-color="#171326"/>
+            </linearGradient>
+          </defs>
+          <rect width="720" height="560" fill="url(#heroSky)"/>
+          <circle cx="560" cy="120" r="150" fill="#8b5cf6" opacity="0.20"/>
+          <circle cx="150" cy="430" r="170" fill="#ff2e5b" opacity="0.15"/>
+          <g opacity="0.55" stroke="#3c3358" stroke-width="1">
+            <path d="M0 380 H720 M0 440 H720 M0 500 H720"/>
+            <path d="M120 260 V560 M300 260 V560 M480 260 V560 M640 260 V560"/>
+          </g>
+          <rect x="62" y="96" width="360" height="238" rx="16" fill="url(#heroPanel)" stroke="#453a6b"/>
+          <rect x="82" y="116" width="320" height="150" rx="10" fill="#0f0c1c"/>
+          <circle cx="150" cy="182" r="26" fill="#ff2e5b" opacity="0.9"/>
+          <path d="M142 168 L168 182 L142 196 Z" fill="#0f0c1c"/>
+          <rect x="196" y="152" width="180" height="10" rx="5" fill="#3b3159"/>
+          <rect x="196" y="174" width="140" height="10" rx="5" fill="#2c2545"/>
+          <rect x="196" y="196" width="160" height="10" rx="5" fill="#2c2545"/>
+          <rect x="82" y="284" width="120" height="26" rx="8" fill="url(#heroGlow)" opacity="0.85"/>
+          <rect x="214" y="284" width="70" height="26" rx="8" fill="#2c2545"/>
+          <rect x="296" y="284" width="70" height="26" rx="8" fill="#2c2545"/>
+          <g>
+            <rect x="440" y="140" width="220" height="150" rx="14" fill="#161222" stroke="#473a6e"/>
+            <rect x="458" y="160" width="96" height="12" rx="6" fill="#ffd23f" opacity="0.85"/>
+            <rect x="458" y="184" width="184" height="8" rx="4" fill="#382f57"/>
+            <rect x="458" y="202" width="150" height="8" rx="4" fill="#382f57"/>
+            <rect x="458" y="220" width="168" height="8" rx="4" fill="#382f57"/>
+            <rect x="458" y="248" width="80" height="24" rx="7" fill="#ff2e5b" opacity="0.8"/>
+            <rect x="548" y="248" width="80" height="24" rx="7" fill="#2c2545"/>
+          </g>
+          <g>
+            <rect x="380" y="330" width="280" height="150" rx="16" fill="#181327" stroke="#473a6e"/>
+            <circle cx="428" cy="382" r="20" fill="#8b5cf6"/>
+            <circle cx="428" cy="382" r="20" fill="none" stroke="#c4b5fd" stroke-width="2"/>
+            <rect x="462" y="368" width="170" height="10" rx="5" fill="#3b3159"/>
+            <rect x="462" y="390" width="120" height="8" rx="4" fill="#2c2545"/>
+            <path d="M404 442 H640" stroke="#3b3159" stroke-width="2"/>
+            <circle cx="404" cy="442" r="5" fill="#ffd23f"/>
+            <circle cx="470" cy="442" r="5" fill="#ff2e5b"/>
+            <circle cx="536" cy="442" r="5" fill="#8b5cf6"/>
+            <circle cx="602" cy="442" r="5" fill="#2ee6a8"/>
+          </g>
+          <g stroke="url(#heroGlow)" stroke-width="3" fill="none" opacity="0.9">
+            <path d="M120 400 C 200 350, 300 470, 400 400"/>
+          </g>
+        </svg>
+        <div class="bg-hero-badge"><span class="bg-live-dot"></span>正在直播 · 爆料核验室 第 42 期</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点 + 视频条目 -->
+  <section class="bg-sec bg-sec-alt" id="feed">
+    <div class="bg-wrap">
+      <div class="bg-eyebrow">Featured &amp; Hot</div>
+      <h2 class="bg-sec-title">焦点爆料 · 84爆料吃瓜<em>本期主推</em></h2>
+      <p class="bg-sec-desc">每一条爆料都经过素材溯源、时间线比对与多方回应三重核验。这里先给结论，再给过程，最后给仍待确认的空白。</p>
+
+      <div class="bg-filters" role="group" aria-label="视频标签筛选">
+        <button class="bg-filter bg-on" data-bg-filter="all">全部</button>
+        <button class="bg-filter" data-bg-filter="热点">热点追踪</button>
+        <button class="bg-filter" data-bg-filter="深度">深度解读</button>
+        <button class="bg-filter" data-bg-filter="幕后">创作幕后</button>
+        <button class="bg-filter" data-bg-filter="访谈">人物访谈</button>
+      </div>
+
+      <div class="bg-feature-grid">
+        <article class="bg-feature-card" data-bg-cat="热点">
+          <div class="bg-feature-thumb">
+            <svg viewBox="0 0 640 360" role="img" aria-label="焦点爆料视频封面：多屏时间线比对与素材溯源界面">
+              <defs>
+                <linearGradient id="fA" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#2b1840"/><stop offset="1" stop-color="#0f0a1a"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#fA)"/>
+              <g opacity="0.4" stroke="#4a3a70" stroke-width="1">
+                <path d="M0 90 H640 M0 180 H640 M0 270 H640 M160 0 V360 M320 0 V360 M480 0 V360"/>
+              </g>
+              <rect x="40" y="46" width="240" height="128" rx="10" fill="#150f24" stroke="#5a4785"/>
+              <rect x="58" y="64" width="204" height="66" rx="6" fill="#0c0916"/>
+              <circle cx="98" cy="97" r="14" fill="#ff2e5b"/>
+              <path d="M93 89 L107 97 L93 105 Z" fill="#0c0916"/>
+              <rect x="122" y="86" width="120" height="7" rx="3.5" fill="#3b2f5a"/>
+              <rect x="122" y="102" width="88" height="7" rx="3.5" fill="#2b2342"/>
+              <rect x="58" y="140" width="90" height="18" rx="5" fill="#ffd23f" opacity="0.8"/>
+              <rect x="156" y="140" width="106" height="18" rx="5" fill="#2b2342"/>
+              <rect x="40" y="192" width="240" height="122" rx="10" fill="#150f24" stroke="#5a4785"/>
+              <path d="M60 288 L92 250 L124 268 L158 226 L192 256 L226 214 L260 268" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+              <circle cx="226" cy="214" r="5" fill="#ffd23f"/>
+              <rect x="320" y="46" width="280" height="120" rx="12" fill="#171126" stroke="#5a4785"/>
+              <rect x="340" y="64" width="150" height="10" rx="5" fill="#ff2e5b" opacity="0.85"/>
+              <rect x="340" y="86" width="240" height="8" rx="4" fill="#3b2f5a"/>
+              <rect x="340" y="104" width="200" height="8" rx="4" fill="#3b2f5a"/>
+              <rect x="340" y="122" width="216" height="8" rx="4" fill="#3b2f5a"/>
+              <rect x="340" y="144" width="90" height="14" rx="5" fill="#2ee6a8" opacity="0.7"/>
+              <rect x="320" y="186" width="132" height="128" rx="12" fill="#171126" stroke="#5a4785"/>
+              <circle cx="386" cy="238" r="30" fill="#8b5cf6" opacity="0.8"/>
+              <circle cx="386" cy="238" r="30" fill="none" stroke="#c4b5fd" stroke-width="2"/>
+              <rect x="346" y="282" width="80" height="8" rx="4" fill="#3b2f5a"/>
+              <rect x="470" y="186" width="130" height="128" rx="12" fill="#171126" stroke="#5a4785"/>
+              <rect x="490" y="208" width="90" height="8" rx="4" fill="#3b2f5a"/>
+              <rect x="490" y="226" width="66" height="8" rx="4" fill="#3b2f5a"/>
+              <rect x="490" y="252" width="90" height="22" rx="6" fill="#ff2e5b" opacity="0.7"/>
+              <rect x="490" y="284" width="60" height="8" rx="4" fill="#3b2f5a"/>
+            </svg>
+            <div class="bg-play"><span>▶</span></div>
+          </div>
+          <div class="bg-feature-body">
+            <div class="bg-meta" style="margin-bottom:8px;">
+              <span class="bg-tag bg-tag-hot">本期焦点</span>
+              <span class="bg-tag">深度解读</span>
+            </div>
+            <h3>热搜背后：一条爆料如何从私信走到成片</h3>
+            <p>我们跟拍了一支三人内容小组 72 小时：从接到线索、逐帧比对聊天截图，到联系当事人回应，再到最终把「已确认 / 待确认」分开呈现。全片没有煽动性字幕，只有可回放的时间线。</p>
+            <div class="bg-meta">
+              <span>创作者 <b>@老周在现场</b></span>
+              <span>播放 128.4 万</span>
+              <span>点赞 9.6 万</span>
+              <span>收藏 3.2 万</span>
+            </div>
+            <div class="bg-actions">
+              <button class="bg-act" data-bg-like aria-pressed="false">👍 <span data-bg-num>9.6万</span></button>
+              <button class="bg-act" data-bg-save aria-pressed="false">♡ 收藏</button>
+              <button class="bg-act" data-bg-share>↗ 分享</button>
+              <button class="bg-act" data-bg-report>⚑ 反馈</button>
+            </div>
+          </div>
+        </article>
+
+        <ul class="bg-vlist">
+          <li class="bg-vitem" data-bg-cat="热点">
+            <div class="bg-vitem-left">
+              <div class="bg-vitem-rank bg-top">01</div>
+              <div>
+                <h4>三次反转之后，我们把原视频完整放出</h4>
+                <p>事件发酵第 5 天，逐条回应网络上流传的剪辑版本，并标注每一处删改。</p>
+                <div class="bg-vitem-tags"><span class="bg-tag">热点追踪</span><span class="bg-tag">核验</span></div>
+              </div>
+            </div>
+            <div class="bg-meta"><span>86.2万播放</span></div>
+          </li>
+          <li class="bg-vitem" data-bg-cat="深度">
+            <div class="bg-vitem-left">
+              <div class="bg-vitem-rank bg-top">02</div>
+              <div>
+                <h4>艺人工作室声明里，那些被忽略的措辞</h4>
+                <p>从法律与传播双视角拆解六份声明文本，看看哪些词在承担真正的信息量。</p>
+                <div class="bg-vitem-tags"><span class="bg-tag">深度解读</span><span class="bg-tag">文本分析</span></div>
+              </div>
+            </div>
+            <div class="bg-meta"><span>64.7万播放</span></div>
+          </li>
+          <li class="bg-vitem" data-bg-cat="幕后">
+            <div class="bg-vitem-left">
+              <div class="bg-vitem-rank">03</div>
+              <div>
+                <h4>拍摄幕后：我们在片场等了 11 个小时</h4>
+                <p>一支爆料短视频的诞生，往往不在镜头里，而在等待与确认之间。</p>
+                <div class="bg-vitem-tags"><span class="bg-tag">创作幕后</span><span class="bg-tag">日常记录</span></div>
+              </div>
+            </div>
+            <div class="bg-meta"><span>42.1万播放</span></div>
+          </li>
+          <li class="bg-vitem" data-bg-cat="访谈">
+            <div class="bg-vitem-left">
+              <div class="bg-vitem-rank">04</div>
+              <div>
+                <h4>人物访谈：做了八年娱记，我如何判断信源</h4>
+                <p>与资深记者对谈 90 分钟，聊信源分级、交叉验证与拒绝发布的那一刻。</p>
+                <div class="bg-vitem-tags"><span class="bg-tag">人物访谈</span><span class="bg-tag">行业观察</span></div>
+              </div>
+            </div>
+            <div class="bg-meta"><span>38.5万播放</span></div>
+          </li>
+          <li class="bg-vitem" data-bg-cat="深度">
+            <div class="bg-vitem-left">
+              <div class="bg-vitem-rank">05</div>
+              <div>
+                <h4>吃瓜的正确姿势：一条自查清单请你收好</h4>
+                <p>五步验证法，帮你在转发前问自己三个问题，减少误伤与误传。</p>
+                <div class="bg-vitem-tags"><span class="bg-tag">实用技巧</span><span class="bg-tag">指南</span></div>
+              </div>
+            </div>
+            <div class="bg-meta"><span>33.9万播放</span></div>
+          </li>
+        </ul>
+      </div>
+      <p class="bg-empty" id="bgFeedEmpty">当前标签下暂无匹配的爆料条目，换个标签看看吧。</p>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="bg-sec" id="topics">
+    <div class="bg-wrap">
+      <div class="bg-eyebrow">Special Projects</div>
+      <h2 class="bg-sec-title">专题企划 · 84爆料吃瓜<em>长期追踪</em></h2>
+      <p class="bg-sec-desc">比起单条视频的高播放，我们更在意一件事能被讲清楚。三个长期专题，持续更新，持续纠错。</p>
+      <div class="bg-topic-grid">
+        <article class="bg-topic">
+          <div class="bg-topic-head">
+            <div>
+              <h3>年度爆料大会</h3>
+              <div class="bg-topic-sub">18 位创作者联合企划</div>
+            </div>
+            <span class="bg-tag bg-tag-new">更新中</span>
+          </div>
+          <p style="font-size:13.5px;color:#c3c2d2;margin:0;">把一年里被反复讨论的事件拉回时间线，看它们如何发生、如何被误读、又如何被修正。</p>
+          <ul class="bg-topic-list">
+            <li>《十二个关键词，回看 2026 娱乐舆论场》</li>
+            <li>《被截断的采访：完整版释出》</li>
+            <li>《创作者圆桌：我们为什么不再抢首发》</li>
+          </ul>
+        </article>
+        <article class="bg-topic">
+          <div class="bg-topic-head">
+            <div>
+              <h3>镜头之外 · 记录者手记</h3>
+              <div class="bg-topic-sub">纪录片式内容企划</div>
+            </div>
+            <span class="bg-tag bg-tag-new">第 6 集已上线</span>
+          </div>
+          <p style="font-size:13.5px;color:#c3c2d2;margin:0;">跟着内容团队走进现场，记录那些最终没有出现在成片里的犹豫、争执与妥协。</p>
+          <ul class="bg-topic-list">
+            <li>《剪辑台上的第七版》</li>
+            <li>《一个电话打了四十分钟》</li>
+            <li>《我们为什么删掉那段画面》</li>
+          </ul>
+        </article>
+        <article class="bg-topic">
+          <div class="bg-topic-head">
+            <div>
+              <h3>吃瓜素养公开课</h3>
+              <div class="bg-topic-sub">知识科普向企划</div>
+            </div>
+            <span class="bg-tag">连载 12 期</span>
+          </div>
+          <p style="font-size:13.5px;color:#c3c2d2;margin:0;">把媒介素养讲成人人都能听懂的语言：截图能证明什么，时间戳又能证明什么。</p>
+          <ul class="bg-topic-list">
+            <li>《截图不是证据，但可以是线索》</li>
+            <li>《转发之前的三秒钟》</li>
+            <li>《如何给一条爆料打分》</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4/M15 关键词解析长文 -->
+  <section class="bg-sec bg-sec-alt" id="explain">
+    <div class="bg-wrap">
+      <div class="bg-eyebrow">Brand Insight</div>
+      <h2 class="bg-sec-title">关键词解析 · 84爆料吃瓜<em>到底在做什么</em></h2>
+      <div class="bg-article">
+        <div class="bg-article-body">
+          <p>很多人第一次听到「84爆料吃瓜」这个名字，会以为这只是一个追逐热点的搬运账号。事实上，作为一家持续运营的娱乐内容企业，我们更愿意把自己定义为「爆料视频的整理者与核验者」。这个官网首页，就是我们向观众与创作者同时交底的地方：我们做什么、怎么做、做到什么程度，以及我们拒绝做什么。</p>
+
+          <h3>一、「爆料」不是抢速度，而是把信息链条补完整</h3>
+          <p>在娱乐内容领域，速度往往意味着流量，但速度也最容易制造误伤。我们的编辑流程里有一个硬性规定：任何一条爆料视频在发布前，必须完成素材溯源、时间线梳理、关联方回应三步。素材溯源要求保留原始文件与获取路径；时间线梳理要求把所有关键节点按发生顺序排列，而不是按传播热度排列；关联方回应则要求至少完成一次正式联系，哪怕对方选择不回应，也要在片中如实标注「已联系，暂未获回复」。</p>
+          <p>这套流程会让我们的更新慢一点。一条热搜事件，别的账号可能两小时就出片，我们常常要等到第二天。但从 2023 年至今，我们发布的 3800 多条原创爆料视频中，因事实错误而下架的比例维持在千分之三以下。对那些只想看个热闹的观众来说，这个数字也许不重要；但对被爆料的对象而言，它意味着一段本可以不被误读的人生。这也是我们把「真实」写进品牌理念的原因。</p>
+          <div class="bg-callout">核验不是给内容加门槛，而是给围观加一层缓冲。我们相信，慢半拍的结论，比快一步的伤害更值得。</div>
+
+          <h3>二、「吃瓜」是一种大众参与，也需要基本素养</h3>
+          <p>吃瓜的本意是围观与讨论，它本身并不低俗。问题在于，当围观缺乏基本的方法，讨论就会滑向审判。所以平台设置了「吃瓜素养公开课」这一长期科普企划，把媒介素养拆成普通人听得懂的十二期内容：怎么判断一张截图是否被裁剪、怎么通过多个独立信源交叉验证、怎么区分「当事人回应」与「第三方转述」、怎么在评论区里避免对无关者造成二次伤害。</p>
+          <p>这些内容播放量并不惊人，平均只有二三十万，但它们的完播率和收藏率是全站最高的。很多用户在评论里说，看完之后自己转发前会多停三秒。对我们来说，这三秒就是内容生态真正产生的价值。平台还在视频页上线了「待确认」标签，凡是有争议、尚未完成全部核验的条目，都会被明确标识，避免观众把推测当作结论。</p>
+
+          <h3>三、创作者社区：让认真做内容的人被看见</h3>
+          <p>84爆料吃瓜的内容并非由一个编辑部独立完成。平台目前签约 276 位创作者，覆盖记者、剪辑师、法律从业者、影视从业者、城市观察者等多种背景。我们为创作者提供的不只是流量，还有一套可复用的工作方法：标准化的线索登记表、可共享的核验清单、法务预审通道，以及一个允许「不发」的宽松机制。我们始终认为，一个健康的视频社区，必须承认有些内容不该被做出来。</p>
+          <p>在分成机制上，平台采取「基础稿酬 + 品质系数 + 长期贡献」的三段式结构。品质系数由核验完整度、观众收藏率与专业评审打分共同决定，而不是单纯看播放量。这套机制运行两年后，站内高核验等级内容的产量提升了近三倍。我们并不指望用一套规则改变整个行业，但至少在自己的社区里，让认真成为一种能被回报的选择。</p>
+
+          <h3>四、企业责任与长期主义</h3>
+          <p>娱乐爆料天然带着强情绪属性，这也意味着平台必须承担比一般内容站点更高的社会责任。我们在官网首页公开核验标准、在每条视频下提供反馈入口、在争议事件中主动发布更正说明，都是为了让「纠错」成为一件正常的事。2026 年，平台共发布 19 次公开更正，其中 6 次是对自家内容的推翻。</p>
+          <p>未来一年，84爆料吃瓜会继续把资源投向三件事：一是完善创作者培训体系，把核验方法沉淀为可公开学习的课程；二是扩展「镜头之外」纪录片企划，记录内容行业的真实工作状态；三是与高校新闻传播院系合作，开展面向公众的媒介素养公益讲座。我们希望这个品牌被记住的，不只是某一条爆款视频，而是一种更克制、更值得信赖的围观方式。这也是我们作为企业，对用户、对创作者、对被报道者共同作出的承诺。</p>
+        </div>
+        <aside class="bg-aside">
+          <div class="bg-card">
+            <h4>平台速览</h4>
+            <div class="bg-kv">
+              <div><span>成立时间</span><b>2021 年</b></div>
+              <div><span>签约创作者</span><b>276 位</b></div>
+              <div><span>原创视频</span><b>3,820+ 条</b></div>
+              <div><span>核验等级</span><b>三级制</b></div>
+              <div><span>公开更正</span><b>19 次 / 年</b></div>
+            </div>
+          </div>
+          <div class="bg-card">
+            <h4>相关内容标签</h4>
+            <div class="bg-aside-tags">
+              <span class="bg-tag">爆料核验</span>
+              <span class="bg-tag">娱乐观察</span>
+              <span class="bg-tag">媒介素养</span>
+              <span class="bg-tag">创作幕后</span>
+              <span class="bg-tag">人物访谈</span>
+              <span class="bg-tag">行业观察</span>
+            </div>
+          </div>
+          <div class="bg-card">
+            <h4>参与共建</h4>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">如果你手上有可核验的线索，或想加入创作者社区，欢迎通过官方渠道联系我们。</p>
+            <a class="bg-btn bg-btn-sm bg-btn-primary" href="#submit" data-bg-modal="submit">提交线索 / 投稿</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵：双列简介 -->
+  <section class="bg-sec" id="authors">
+    <div class="bg-wrap">
+      <div class="bg-eyebrow">Creators</div>
+      <h2 class="bg-sec-title">创作者矩阵 · 84爆料吃瓜<em>社区中坚</em></h2>
+      <p class="bg-sec-desc">他们来自不同行业，共享同一套核验方法。点击「查看档案」可以看到他们的完整作品脉络。</p>
+      <div class="bg-authors">
+        <article class="bg-author">
+          <div class="bg-avatar" style="background:linear-gradient(135deg,#ff2e5b,#ffd23f);">周</div>
+          <div>
+            <h3>老周在现场</h3>
+            <div class="bg-author-role">现场追踪 · 前社会新闻记者</div>
+            <p>做了九年社会新闻，转做娱乐内容后依然保留现场习惯。擅长把复杂事件拉成时间线，视频节奏偏慢，但每一条都能对上原始素材。代表作《热搜背后》系列。</p>
+            <div class="bg-author-nums"><span>作品 <b>214</b></span><span>粉丝 <b>86.3万</b></span></div>
+            <button class="bg-author-btn" data-bg-author="老周在现场|现场追踪 · 前社会新闻记者|九年社会新闻从业经历，现专注娱乐事件的现场还原与时间线梳理。坚持每条视频附原始素材索引，个人作品累计播放超过 1.2 亿，是站内核验等级最高的创作者之一。">查看档案 →</button>
+          </div>
+        </article>
+        <article class="bg-author">
+          <div class="bg-avatar" style="background:linear-gradient(135deg,#8b5cf6,#22d3ee);">林</div>
+          <div>
+            <h3>林小满的观察簿</h3>
+            <div class="bg-author-role">文本分析 · 传播学硕士</div>
+            <p>把声明、通稿与采访稿当作文本来读。擅长从措辞变化里发现问题，视频里常出现逐句批注的画面。她做的「声明拆解」系列，被不少从业者当作参考。</p>
+            <div class="bg-author-nums"><span>作品 <b>168</b></span><span>粉丝 <b>62.7万</b></span></div>
+            <button class="bg-author-btn" data-bg-author="林小满的观察簿|文本分析 · 传播学硕士|传播学硕士，专注公共声明与媒体文本的话语分析。擅长以逐句批注的方式呈现措辞背后的信息差，累计发布 168 条原创解析视频，收藏率长期位居站内前列。">查看档案 →</button>
+          </div>
+        </article>
+        <article class="bg-author">
+          <div class="bg-avatar" style="background:linear-gradient(135deg,#2ee6a8,#0ea5e9);">陈</div>
+          <div>
+            <h3>陈默剪辑室</h3>
+            <div class="bg-author-role">剪辑教学 · 十年后期从业者</div>
+            <p>只讲技术，不评价人。把爆料类短视频的剪辑规范拆成可操作的步骤，从素材标记到敏感信息打码，全是干货。许多新创作者的第一课就来自他的视频。</p>
+            <div class="bg-author-nums"><span>作品 <b>132</b></span><span>粉丝 <b>47.9万</b></span></div>
+            <button class="bg-author-btn" data-bg-author="陈默剪辑室|剪辑教学 · 十年后期从业者|十年影视后期经验，专注爆料类短视频的剪辑规范教学。课程覆盖素材管理、时间线呈现与敏感信息处理，累计帮助四百余位新创作者完成首支合规成片。">查看档案 →</button>
+          </div>
+        </article>
+        <article class="bg-author">
+          <div class="bg-avatar" style="background:linear-gradient(135deg,#fb7185,#a855f7);">许</div>
+          <div>
+            <h3>许知野</h3>
+            <div class="bg-author-role">人物访谈 · 独立纪录片导演</div>
+            <p>习惯把镜头交给受访者，自己少说话。做娱乐行业从业者的深度访谈，也记录那些被舆论忽略的普通人。作品被评价为「有耐心的影像」。</p>
+            <div class="bg-author-nums"><span>作品 <b>96</b></span><span>粉丝 <b>39.4万</b></span></div>
+            <button class="bg-author-btn" data-bg-author="许知野|人物访谈 · 独立纪录片导演|独立纪录片导演，专注娱乐行业从业者与边缘当事人的长访谈。作品坚持不剪辑回答、不添加配乐，以克制的影像语言记录个体处境，多次入选站内年度精品内容。">查看档案 →</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 榜单 -->
+  <section class="bg-sec bg-sec-alt" id="board">
+    <div class="bg-wrap">
+      <div class="bg-eyebrow">Data Board</div>
+      <h2 class="bg-sec-title">数据榜单 · 84爆料吃瓜<em>本周热度</em></h2>
+      <p class="bg-sec-desc">榜单统计周期为每周一至周日，综合播放完成度、收藏率与核验等级加权计算，不单纯以播放量排序。</p>
+      <div class="bg-board-grid">
+        <div class="bg-board">
+          <h3>热度榜 <span>近 7 天</span></h3>
+          <ol>
+            <li><b>热搜背后：一条爆料如何从私信走到成片</b><i>128.4万</i></li>
+            <li><b>三次反转之后，我们把原视频完整放出</b><i>86.2万</i></li>
+            <li><b>艺人工作室声明里，那些被忽略的措辞</b><i>64.7万</i></li>
+            <li><b>拍摄幕后：我们在片场等了 11 个小时</b><i>42.1万</i></li>
+            <li><b>吃瓜的正确姿势：一条自查清单请你收好</b><i>33.9万</i></li>
+          </ol>
+        </div>
+        <div class="bg-board">
+          <h3>新人榜 <span>入驻 90 天内</span></h3>
+          <ol>
+            <li><b>南风记录局</b><i>核验分 92</i></li>
+            <li><b>小鹿拆片</b><i>核验分 89</i></li>
+            <li><b>雾港观察</b><i>核验分 88</i></li>
+            <li><b>阿盐的行车记录</b><i>核验分 86</i></li>
+            <li><b>第十排观众</b><i>核验分 84</i></li>
+          </ol>
+        </div>
+        <div class="bg-board">
+          <h3>口碑榜 <span>收藏率加权</span></h3>
+          <ol>
+            <li><b>人物访谈：做了八年娱记，我如何判断信源</b><i>★ 4.9</i></li>
+            <li><b>如何给一条爆料打分</b><i>★ 4.8</i></li>
+            <li><b>截图不是证据，但可以是线索</b><i>★ 4.8</i></li>
+            <li><b>我们为什么删掉那段画面</b><i>★ 4.7</i></li>
+            <li><b>一个电话打了四十分钟</b><i>★ 4.7</i></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 评价：引用 + 双列短评 -->
+  <section class="bg-sec" id="comments">
+    <div class="bg-wrap">
+      <div class="bg-eyebrow">Community Voices</div>
+      <h2 class="bg-sec-title">用户评价 · 84爆料吃瓜<em>真实反馈</em></h2>
+      <div class="bg-quote">
+        <p>我把这个站当资料库用。以前追一个事件，要在十几个平台之间来回跳，现在至少能在一个地方看到完整时间线和原始素材出处。哪怕结论我不认同，过程是能查的。</p>
+        <div class="bg-quote-by">
+          <span class="bg-avatar" style="width:30px;height:30px;border-radius:9px;font-size:12px;background:linear-gradient(135deg,#ffd23f,#ff2e5b);">苏</span>
+          <span>苏木 · 老用户 · 收藏 312 条</span>
+        </div>
+      </div>
+      <div class="bg-comments">
+        <article class="bg-comment">
+          <div class="bg-comment-head">
+            <span class="bg-avatar" style="background:linear-gradient(135deg,#8b5cf6,#22d3ee);">阿</span>
+            <div><b>阿七不吃瓜皮</b><small>2026-11-18</small></div>
+          </div>
+          <p>最欣赏「待确认」这个标签，真的省了不少事。有时候刷到别的号说得斩钉截铁，回这里一看才知道还在核验中。</p>
+          <div class="bg-comment-foot"><span class="bg-stars">★★★★★</span><span>有用 214</span></div>
+        </article>
+        <article class="bg-comment">
+          <div class="bg-comment-head">
+            <span class="bg-avatar" style="background:linear-gradient(135deg,#2ee6a8,#0ea5e9);">南</span>
+            <div><b>南街旧事</b><small>2026-11-15</small></div>
+          </div>
+          <p>更新慢是缺点也是优点。急着吃热乎的可以去别处，想看明白的留在这里。</p>
+          <div class="bg-comment-foot"><span class="bg-stars">★★★★☆</span><span>有用 176</span></div>
+        </article>
+        <article class="bg-comment">
+          <div class="bg-comment-head">
+            <span class="bg-avatar" style="background:linear-gradient(135deg,#fb7185,#a855f7);">林</span>
+            <div><b>林间有雾</b><small>2026-11-12</small></div>
+          </div>
+          <p>剪辑教学系列帮了大忙。我按着陈默的步骤重做了一遍素材标记，导师说规范多了。</p>
+          <div class="bg-comment-foot"><span class="bg-stars">★★★★★</span><span>有用 143</span></div>
+        </article>
+        <article class="bg-comment">
+          <div class="bg-comment-head">
+            <span class="bg-avatar" style="background:linear-gradient(135deg,#ffd23f,#ff2e5b);">大</span>
+            <div><b>大橘为重</b><small>2026-11-09</small></div>
+          </div>
+          <p>希望多做点幕后。成片之外的东西反而更好看，能看到人做判断时的犹豫。</p>
+          <div class="bg-comment-foot"><span class="bg-stars">★★★★☆</span><span>有用 98</span></div>
+        </article>
+        <article class="bg-comment">
+          <div class="bg-comment-head">
+            <span class="bg-avatar" style="background:linear-gradient(135deg,#22d3ee,#8b5cf6);">一</span>
+            <div><b>一只耳朵听</b><small>2026-11-05</small></div>
+          </div>
+          <p>我其实是被爆料吸引来的，最后留下来是因为公开课。现在转发前真的会停一下。</p>
+          <div class="bg-comment-foot"><span class="bg-stars">★★★★★</span><span>有用 87</span></div>
+        </article>
+        <article class="bg-comment">
+          <div class="bg-comment-head">
+            <span class="bg-avatar" style="background:linear-gradient(135deg,#0ea5e9,#2ee6a8);">米</span>
+            <div><b>米店小老板</b><small>2026-11-02</small></div>
+          </div>
+          <p>提个小意见：分类筛选能不能再细一点，想只看访谈类。</p>
+          <div class="bg-comment-foot"><span class="bg-stars">★★★☆☆</span><span>有用 41</span></div>
+        </article>
+        <article class="bg-comment">
+          <div class="bg-comment-head">
+            <span class="bg-avatar" style="background:linear-gradient(135deg,#a855f7,#ff2e5b);">海</span>
+            <div><b>海边第十排</b><small>2026-10-28</small></div>
+          </div>
+          <p>许知野的访谈是真的有耐心，一个镜头能停十几秒不切。现在这样的内容不多了。</p>
+          <div class="bg-comment-foot"><span class="bg-stars">★★★★★</span><span>有用 132</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 -->
+  <section class="bg-sec bg-sec-alt" id="news">
+    <div class="bg-wrap">
+      <div class="bg-eyebrow">Official Updates</div>
+      <h2 class="bg-sec-title">企业动态 · 84爆料吃瓜<em>官方发布</em></h2>
+      <ul class="bg-news">
+        <li>
+          <time>2026-11-20</time>
+          <div><b>核验标准 3.0 版本正式上线</b><span>新增「多源交叉」与「时间戳一致性」两项评估维度，全部创作者已完成培训。</span></div>
+        </li>
+        <li>
+          <time>2026-11-14</time>
+          <div><b>「年度爆料大会」专题开放投稿</b><span>面向全站创作者征集年度复盘选题，入选作品将获得专项制作支持。</span></div>
+        </li>
+        <li>
+          <time>2026-11-06</time>
+          <div><b>与三所高校达成媒介素养合作</b><span>联合开发面向公众的公益课程，首期预计 2027 年春季上线。</span></div>
+        </li>
+        <li>
+          <time>2026-10-29</time>
+          <div><b>第 19 次公开更正说明发布</b><span>就某条视频中的时间标注错误向观众与当事人致歉，相关片段已重新剪辑。</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- M9 创作灵感 + M11 合作 -->
+  <section class="bg-sec" id="inspire">
+    <div class="bg-wrap">
+      <div class="bg-eyebrow">Inspiration &amp; Partners</div>
+      <h2 class="bg-sec-title">创作灵感 · 84爆料吃瓜<em>给创作者的工具箱</em></h2>
+      <p class="bg-sec-desc">选题卡住了，可以从这里找回方向。以下工具与模板由平台编辑部整理，全部免费向社区开放。</p>
+      <div class="bg-topic-grid" style="margin-bottom:38px;">
+        <article class="bg-topic">
+          <h3>选题灵感卡</h3>
+          <p style="font-size:13.5px;color:#c3c2d2;">输入一个事件关键词，生成 5 个不同角度的选题方向，涵盖核验、文本、人物与幕后。</p>
+          <button class="bg-btn bg-btn-sm bg-btn-primary" data-bg-toast="已为你生成 5 个选题方向示例" style="margin-top:12px;">生成方向</button>
+        </article>
+        <article class="bg-topic">
+          <h3>标题优化建议</h3>
+          <p style="font-size:13.5px;color:#c3c2d2;">避免绝对化表述，保留信息量。工具会给出去情绪化、增准确性的改写示例。</p>
+          <button class="bg-btn bg-btn-sm bg-btn-primary" data-bg-toast="标题改写建议已复制到剪贴板" data-bg-copy="【原】震惊！某艺人深夜发文秒删　【改】某艺人深夜发文后删除，内容涉及剧组调整" style="margin-top:12px;">获取建议</button>
+        </article>
+        <article class="bg-topic">
+          <h3>剪辑节奏模板</h3>
+          <p style="font-size:13.5px;color:#c3c2d2;">爆料类内容的三段式结构模板：结论前置、证据铺陈、留白收束，附时间轴参考。</p>
+          <button class="bg-btn bg-btn-sm bg-btn-primary" data-bg-toast="模板链接已复制，可在剪辑软件中导入" data-bg-copy="84爆料吃瓜 · 三段式结构模板（时间轴版）" style="margin-top:12px;">下载模板</button>
+        </article>
+      </div>
+
+      <div class="bg-divider" style="margin-bottom:36px;"></div>
+
+      <h3 style="font-size:18px;margin-bottom:16px;">合作品牌与伙伴</h3>
+      <div class="bg-partners">
+        <div class="bg-partner">星河影业<small>内容联合出品</small></div>
+        <div class="bg-partner">回声工作室<small>纪录片合作</small></div>
+        <div class="bg-partner">青简数据<small>核验技术支持</small></div>
+        <div class="bg-partner">南声学院<small>素养课程共建</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 投稿 + FAQ -->
+  <section class="bg-sec bg-sec-alt" id="submit">
+    <div class="bg-wrap">
+      <div class="bg-cta" style="margin-bottom:44px;">
+        <h2>有线索，也有表达欲？</h2>
+        <p>84爆料吃瓜长期接收可核验的线索与原创视频投稿。我们承诺：所有投稿均进入人工核验流程，涉及个人隐私的信息在发布前会做脱敏处理，未采用的素材不对外流转。</p>
+        <div class="bg-cta-actions">
+          <button class="bg-btn bg-btn-primary" data-bg-modal="submit">提交线索 / 投稿</button>
+          <button class="bg-btn bg-btn-ghost" data-bg-share>分享本页给朋友</button>
+        </div>
+      </div>
+
+      <div id="faq">
+        <div class="bg-eyebrow">FAQ</div>
+        <h2 class="bg-sec-title">常见问题 · <em>关于我们</em></h2>
+        <div class="bg-faq">
+          <details open>
+            <summary>84爆料吃瓜的内容来源是什么？</summary>
+            <p>主要来自三部分：社区创作者投稿、平台自采线索，以及公开渠道的可核验信息整理。所有内容在发布前都会经过至少两名编辑的独立复核。</p>
+          </details>
+          <details>
+            <summary>「待确认」标签是什么意思？</summary>
+            <p>表示该条目涉及的某个关键信息尚未完成交叉验证，或当事人尚未回应。此类内容在页面内会明确标注，并在信息补充后更新状态。</p>
+          </details>
+          <details>
+            <summary>发现内容有误，如何反馈？</summary>
+            <p>每条视频下方均有「反馈」按钮，也可以在本页底部联系我们。核实后我们会在 48 小时内给出处理结果，必要时发布公开更正。</p>
+          </details>
+          <details>
+            <summary>如何成为平台签约创作者？</summary>
+            <p>先通过投稿入口提交一支完整的原创作品，编辑部会评估核验意识与表达能力，通过后进入三个月的试运营期，期间提供培训与流量支持。</p>
+          </details>
+          <details>
+            <summary>投稿会不会泄露我的个人信息？</summary>
+            <p>不会。投稿通道采用独立工单系统，仅核验小组可访问。若内容发布，涉及提供者身份的信息会全部脱敏。</p>
+          </details>
+          <details>
+            <summary>平台的更正机制是怎样的？</summary>
+            <p>我们设有三级更正：页面补充说明、视频重新剪辑、公开致歉声明。2026 年已公开更正 19 次，全部记录在企业动态中可查。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- S8 页脚 -->
+<footer class="bg-footer">
+  <div class="bg-wrap">
+    <div class="bg-footer-grid">
+      <div class="bg-footer-brand">
+        <a class="bg-logo" href="#top" style="margin-bottom:14px;">
+          <span class="bg-logo-mark">84</span>
+          <span>84爆料吃瓜<small>OFFICIAL VIDEO HUB</small></span>
+        </a>
+        <p>84爆料吃瓜官方网站 · 专注娱乐爆料与吃瓜话题的原创视频内容平台。我们坚持核验先行、真实表达，与 276 位创作者共同建设值得信赖的内容生态。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#feed">焦点爆料</a></li>
+          <li><a href="#topics">专题企划</a></li>
+          <li><a href="#board">数据榜单</a></li>
+          <li><a href="#authors">创作者名录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#explain">关键词解析</a></li>
+          <li><a href="#news">企业动态</a></li>
+          <li><a href="#inspire">创作灵感</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <ul>
+          <li><a href="#submit" data-bg-modal="submit">投稿与合作</a></li>
+          <li><a href="#submit" data-bg-modal="submit">线索反馈</a></li>
+          <li><a href="#comments">用户评价</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg-footer-bottom">
+      <span>© 2021-2026 84爆料吃瓜 官方网站 · 版权所有 · 持续运营中</span>
+      <span>沪ICP备2021000000号 · 内容合规审核中 · 用户至上 · 匠心出品</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 弹窗 -->
+<div class="bg-modal" id="bgModal" role="dialog" aria-modal="true" aria-labelledby="bgModalTitle">
+  <div class="bg-modal-box">
+    <div class="bg-modal-head">
+      <div>
+        <h3 id="bgModalTitle">提交线索 / 投稿</h3>
+        <p id="bgModalDesc" style="margin:0;">填写后进入人工核验流程，我们会在 3 个工作日内回复。</p>
+      </div>
+      <button class="bg-close" id="bgModalClose" aria-label="关闭弹窗">✕</button>
+    </div>
+    <div id="bgModalBody">
+      <div class="bg-field">
+        <label for="bgF1">联系方式（邮箱或手机号）</label>
+        <input id="bgF1" type="text" placeholder="用于回复核验结果">
+      </div>
+      <div class="bg-field">
+        <label for="bgF2">内容类型</label>
+        <select id="bgF2">
+          <option>爆料线索</option>
+          <option>原创视频投稿</option>
+          <option>内容纠错</option>
+          <option>合作洽谈</option>
+        </select>
+      </div>
+      <div class="bg-field">
+        <label for="bgF3">简要说明</label>
+        <textarea id="bgF3" placeholder="请尽量写明时间、地点与可核验的信息来源"></textarea>
+      </div>
+      <button class="bg-btn bg-btn-primary" data-bg-toast="提交成功，我们会尽快与你联系">确认提交</button>
+    </div>
+  </div>
+</div>
+
+<div class="bg-toast" id="bgToast" role="status" aria-live="polite"></div>
+<button class="bg-top" id="bgTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var d = document;
+  var header = d.getElementById('bgHeader');
+  var menuBtn = d.getElementById('bgMenuBtn');
+
+  /* 移动端导航折叠 */
+  if(menuBtn){
+    menuBtn.addEventListener('click', function(){
+      var open = header.classList.toggle('bg-nav-open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    d.querySelectorAll('.bg-nav a').forEach(function(a){
+      a.addEventListener('click', function(){
+        header.classList.remove('bg-nav-open');
+        menuBtn.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  /* Toast */
+  var toast = d.getElementById('bgToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('bg-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('bg-show'); }, 2600);
+  }
+
+  /* 搜索反馈 */
+  var search = d.getElementById('bgSearch');
+  var hint = d.getElementById('bgSearchHint');
+  var keywords = ['热搜背后','声明拆解','吃瓜素养','剪辑规范','人物访谈','年度爆料大会','待确认标签','镜头之外'];
+  function doSearch(){
+    var v = (search.value || '').trim();
+    if(!v){
+      hint.innerHTML = '试试这些热门词：' + keywords.slice(0,4).map(function(k){return '<b>'+k+'</b>';}).join('、');
+      hint.classList.add('bg-open');
+      return;
+    }
+    var hit = keywords.filter(function(k){ return k.indexOf(v) !== -1 || v.indexOf(k) !== -1; });
+    if(hit.length){
+      hint.innerHTML = '找到 <b>'+hit.length+'</b> 个相关话题：' + hit.map(function(k){return '<b>'+k+'</b>';}).join('、') + '，可前往对应板块查看。';
+    }else{
+      hint.innerHTML = '暂未匹配「<b>'+v.replace(/[<>&]/g,'')+'</b>」，可尝试更短的关键词，或点击「焦点爆料」浏览近期内容。';
+    }
+    hint.classList.add('bg-open');
+  }
+  if(search){
+    search.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+    search.addEventListener('input', function(){ if(!search.value.trim()){ hint.classList.remove('bg-open'); } });
+  }
+  d.getElementById('bgSearchBtn').addEventListener('click', doSearch);
+  d.addEventListener('click', function(e){
+    if(hint && !hint.contains(e.target) && e.target !== search && e.target.id !== 'bgSearchBtn'){
+      hint.classList.remove('bg-open');
+    }
+  });
+
+  /* 点赞 / 收藏 */
+  d.querySelectorAll('[data-bg-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('bg-liked');
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      var numEl = btn.querySelector('[data-bg-num]');
+      if(numEl){
+        if(on){ numEl.textContent = '9.7万'; } else { numEl.textContent = '9.6万'; }
+      }
+      showToast(on ? '已点赞，感谢支持原创内容' : '已取消点赞');
+    });
+  });
+  d.querySelectorAll('[data-bg-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('bg-saved');
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.innerHTML = on ? '♥ 已收藏' : '♡ 收藏';
+      showToast(on ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* 标签筛选 */
+  var filterBtns = d.querySelectorAll('.bg-filter');
+  var items = d.querySelectorAll('[data-bg-cat]');
+  var emptyEl = d.getElementById('bgFeedEmpty');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('bg-on'); });
+      btn.classList.add('bg-on');
+      var cat = btn.getAttribute('data-bg-filter');
+      var shown = 0;
+      items.forEach(function(it){
+        var match = (cat === 'all') || (it.getAttribute('data-bg-cat') === cat);
+        it.classList.toggle('bg-hide', !match);
+        if(match) shown++;
+      });
+      if(emptyEl){ emptyEl.classList.toggle('bg-show', shown === 0); }
+    });
+  });
+
+  /* 分享 / 复制 */
+  function copyText(txt, okMsg){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){ showToast(okMsg); }, function(){ showToast('复制失败，请手动选择文本复制'); });
+    }else{
+      var ta = d.createElement('textarea');
+      ta.value = txt; ta.style.position='fixed'; ta.style.opacity='0';
+      d.body.appendChild(ta); ta.select();
+      try{ d.execCommand('copy'); showToast(okMsg); }catch(err){ showToast('复制失败，请手动选择文本复制'); }
+      d.body.removeChild(ta);
+    }
+  }
+  d.querySelectorAll('[data-bg-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var title = d.title;
+      var text = title + ' — 欢迎在微信 / 微博 / QQ 分享本页。';
+      if(navigator.share){
+        navigator.share({ title: title, text: '84爆料吃瓜官方网站，原创爆料视频社区' }).catch(function(){});
+      }
+      copyText('84爆料吃瓜官方网站 · ' + title, '分享文案已复制，可粘贴到微信 / 微博 / QQ');
+    });
+  });
+  d.querySelectorAll('[data-bg-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      copyText(btn.getAttribute('data-bg-copy'), btn.getAttribute('data-bg-toast') || '已复制到剪贴板');
+    });
+  });
+  d.querySelectorAll('[data-bg-toast]').forEach(function(el){
+    if(el.tagName === 'BUTTON' && !el.hasAttribute('data-bg-copy')){
+      el.addEventListener('click', function(){
+        var modalKey = el.getAttribute('data-bg-modal');
+        if(!modalKey){ showToast(el.getAttribute('data-bg-toast')); }
+      });
+    }
+  });
+
+  /* 弹窗 */
+  var modal = d.getElementById('bgModal');
+  var modalTitle = d.getElementById('bgModalTitle');
+  var modalDesc = d.getElementById('bgModalDesc');
+  var modalBody = d.getElementById('bgModalBody');
+  var modalClose = d.getElementById('bgModalClose');
+
+  function openModal(mode, payload){
+    if(mode === 'submit'){
+      modalTitle.textContent = '提交线索 / 投稿';
+      modalDesc.textContent = '填写后进入人工核验流程，我们会在 3 个工作日内回复。';
+      modalBody.innerHTML =
+        '<div class="bg-field"><label for="bgF1">联系方式（邮箱或手机号）</label><input id="bgF1" type="text" placeholder="用于回复核验结果"></div>' +
+        '<div class="bg-field"><label for="bgF2">内容类型</label><select id="bgF2"><option>爆料线索</option><option>原创视频投稿</option><option>内容纠错</option><option>合作洽谈</option></select></div>' +
+        '<div class="bg-field"><label for="bgF3">简要说明</label><textarea id="bgF3" placeholder="请尽量写明时间、地点与可核验的信息来源"></textarea></div>' +
+        '<button class="bg-btn bg-btn-primary" id="bgSubmitOk">确认提交</button>';
+      d.getElementById('bgSubmitOk').addEventListener('click', function(){
+        closeModal();
+        showToast('提交成功，我们会尽快与你联系');
+      });
+    }else if(mode === 'report'){
+      modalTitle.textContent = '反馈与举报';
+      modalDesc.textContent = '如发现内容存在事实错误或不当信息，请告知我们。';
+      modalBody.innerHTML =
+        '<div class="bg-field"><label for="bgR1">问题类型</label><select id="bgR1"><option>事实错误</option><option>时间标注有误</option><option>涉及隐私</option><option>其他</option></select></div>' +
+        '<div class="bg-field"><label for="bgR2">补充说明</label><textarea id="bgR2" placeholder="请指出具体位置与依据"></textarea></div>' +
+        '<button class="bg-btn bg-btn-primary" id="bgReportOk">提交反馈</button>';
+      d.getElementById('bgReportOk').addEventListener('click', function(){
+        closeModal();
+        showToast('反馈已收到，核实后会在 48 小时内处理');
+      });
+    }else if(mode === 'author'){
+      var parts = (payload || '').split('|');
+      modalTitle.textContent = parts[0] || '创作者档案';
+      modalDesc.textContent = parts[1] || '';
+      modalBody.innerHTML = '<p style="font-size:14px;color:#c3c2d2;line-height:1.9;">' + (parts[2] || '') + '</p>' +
+        '<button class="bg-btn bg-btn-primary" id="bgFollowBtn">关注该创作者</button>';
+      d.getElementById('bgFollowBtn').addEventListener('click', function(){
+        closeModal();
+        showToast('已关注，后续作品会优先展示');
+      });
+    }
+    modal.classList.add('bg-open');
+    d.body.style.overflow = 'hidden';
+    modalClose.focus();
+  }
+  function closeModal(){
+    modal.classList.remove('bg-open');
+    d.body.style.overflow = '';
+  }
+  d.querySelectorAll('[data-bg-modal]').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      openModal(el.getAttribute('data-bg-modal'));
+    });
+  });
+  d.querySelectorAll('[data-bg-report]').forEach(function(el){
+    el.addEventListener('click', function(){ openModal('report'); });
+  });
+  d.querySelectorAll('[data-bg-author]').forEach(function(el){
+    el.addEventListener('click', function(){ openModal('author', el.getAttribute('data-bg-author')); });
+  });
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  d.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('bg-open')){ closeModal(); } });
+
+  /* 回到顶部 */
+  var topBtn = d.getElementById('bgTop');
+  window.addEventListener('scroll', function(){
+    if(window.pageYOffset > 500){ topBtn.classList.add('bg-show'); } else { topBtn.classList.remove('bg-show'); }
+  }, { passive: true });
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+              </html>
